@@ -179,7 +179,8 @@ body {
   line-height: 1.5;
 }
 
-.btn-detail {
+.btn-detail,
+.btn-antrean {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -193,9 +194,19 @@ body {
   transition: background 0.2s;
 }
 
-.btn-detail:hover {
+.btn-detail:hover,
+.btn-antrean:hover {
   background-color: #a32323;
   color: #fff;
+}
+
+.antrean-info {
+  margin-top: 15px;
+  display: none;
+}
+
+.instansi-card.active .antrean-info {
+  display: block;
 }
 
 .layanan-list {
@@ -208,6 +219,10 @@ body {
 
 .instansi-card.active .layanan-list {
   display: block;
+}
+
+.instansi-card.active .btn-detail {
+  display: none;
 }
 
 .layanan-list li {
@@ -254,4 +269,68 @@ body {
 .no-result .search-keyword {
   font-weight: 600;
   color: #cc0000;
+}
+
+/* Tablet (768px - 1024px) */
+@media (max-width: 1024px) {
+  .instansi-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+  }
+}
+
+/* Mobile (max 768px) */
+@media (max-width: 768px) {
+  .instansi-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .instansi-card {
+    padding: 15px;
+  }
+
+  .instansi-icon img {
+    height: 55px;
+  }
+
+  .instansi-card h3 {
+    font-size: 16px;
+  }
+
+  .instansi-card p {
+    font-size: 13px;
+  }
+
+  .btn-detail,
+  .btn-antrean {
+    padding: 8px 15px;
+    font-size: 13px;
+  }
+
+  .layanan-list li {
+    font-size: 13px;
+    padding: 6px 0 6px 18px;
+  }
+
+  .instansi-card.active .layanan-list {
+    padding: 12px 0 0 15px;
+  }
+}
+
+/* Mobile kecil (max 480px) */
+@media (max-width: 480px) {
+  .instansi-icon img {
+    height: 45px;
+  }
+
+  .instansi-card h3 {
+    font-size: 15px;
+  }
+
+  .btn-detail,
+  .btn-antrean {
+    padding: 8px 12px;
+    font-size: 12px;
+  }
 }
