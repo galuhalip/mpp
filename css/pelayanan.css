@@ -1,0 +1,257 @@
+/* Reset dasar */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+}
+
+/* Header */
+#header {
+  background-color: #ffffff; /* putih */
+  border-bottom: 3px solid #cc0000; /* garis merah */
+  padding: 15px 30px;
+}
+
+/* Container utama header */
+.header-main {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  gap: 5px;
+  z-index: 100;
+}
+
+.hamburger span {
+  width: 25px;
+  height: 3px;
+  background-color: #cc0000;
+  border-radius: 3px;
+  transition: all 0.3s ease;
+}
+
+.logo-area {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.logo-area img {
+  height: 60px;
+  width: auto;
+}
+
+.brand h1 {
+  color: #cc0000;
+  font-size: 24px;
+  margin-bottom: 5px;
+}
+
+.brand p {
+  color: #cc0000;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.navbar ul {
+  display: flex;
+  gap: 30px;
+  list-style: none;
+}
+
+.navbar ul li a {
+  color: #cc0000;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 10px 20px;
+  transition: all 0.3s ease;
+  border-radius: 5px;
+}
+
+.navbar ul li a:hover {
+  background-color: #cc0000;
+  color: #ffffff;
+}
+
+/* instansi */
+.instansi {
+  padding: 60px;
+  background-color: #ffffff;
+}
+
+.header-instansi {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.header-instansi h2 {
+  color: #cc0000;
+  font-size: 32px;
+  margin-bottom: 10px;
+}
+
+.search-box {
+  display: flex;
+  max-width: 500px;
+  margin: 20px auto 0 auto;
+  box-shadow: 0 4px 12px rgba(238, 102, 102, 0.8);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.search-box input {
+  flex: 1;
+  padding: 14px 20px;
+  border-right: none;
+  outline: none;
+  font-size: 16px;
+  border: none;
+}
+
+.btn-search {
+  background-color: #cc0000;
+  color: #ffffff;
+  border: none;
+  padding: 0 20px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+
+.btn-search:hover {
+  background-color: #ff4d4d;
+}
+
+.instansi-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+}
+
+.instansi-card {
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 25px 20px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+  border: 1px solid #cc0000;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: transform 0.3s ease;
+}
+
+.instansi-card:hover {
+  transform: translateY(-5px);
+}
+
+.instansi-icon img {
+  height: 50px;
+  width: auto;
+  margin-bottom: 15px;
+}
+
+.instansi-card h3 {
+  font-size: 18px;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.instansi-card p {
+  font-size: 13px;
+  color: #666;
+  margin-bottom: 20px;
+  line-height: 1.5;
+}
+
+.btn-detail {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 0;
+  background-color: #f0f4f8;
+  color: #cc0000;
+  text-decoration: none;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 600;
+  transition: background 0.2s;
+}
+
+.btn-detail:hover {
+  background-color: #a32323;
+  color: #fff;
+}
+
+.layanan-list {
+  display: none;
+  list-style: none;
+  padding: 15px 0 0 20px;
+  margin: 10px 0 0 0;
+  border-top: 1px solid #eee;
+}
+
+.instansi-card.active .layanan-list {
+  display: block;
+}
+
+.layanan-list li {
+  padding: 8px 0;
+  color: #555;
+  font-size: 14px;
+  position: relative;
+  padding-left: 20px;
+}
+
+.layanan-list li::before {
+  content: "•";
+  color: #cc0000;
+  font-weight: bold;
+  position: absolute;
+  left: 0;
+}
+
+/* Hasil pencarian - pesan tidak ditemukan */
+.no-result {
+  text-align: center;
+  padding: 60px 40px;
+  color: #666;
+  font-size: 16px;
+  grid-column: 1 / -1; /* MEMBUAT LEBAR PENUH 1 BARIS */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.no-result i {
+  width: 50px;
+  height: 50px;
+  stroke: #cc0000;
+  margin-bottom: 15px;
+}
+
+.no-result p {
+  margin: 0;
+  font-size: 16px;
+}
+
+.no-result .search-keyword {
+  font-weight: 600;
+  color: #cc0000;
+}
