@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Antrean Online - Mall Pelayanan Publik Kota Bekasi</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://unpkg.com/feather-icons"></script>
+    <link rel="stylesheet" href="css/antrean.css">
+</head>
+
+<body>
+    <header id="header">
+        <div class="header-main">
+            <div class="logo-area">
+                <img src="assets/logompp.png" alt="logo mall pelayanan publik">
+                <div class="brand">
+                    <h1>Mall Pelayanan Publik</h1>
+                    <p>Kota Bekasi</p>
+                </div>
+            </div>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <nav class="navbar">
+                <ul>
+                    <li><a href="index.html">Beranda</a></li>
+                    <li><a href="pelayanan.html">Pelayanan</a></li>
+                    <li><a href="#">Pengaduan</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+
+    <main class="container">
+        <div class="main-content">
+            <section class="hero">
+                <h2>Antrean Online</h2>
+                <p>Kami menghargai waktu Anda. Daftarkan kedatangan Anda secara digital untuk mendapatkan kepastian
+                    kuota pelayanan,
+                    menghindari penumpukan fisik di lokasi, dan menikmati layanan yang lebih cepat serta transparan.</p>
+                <div class="note keterangan">
+                    <i data-feather="alert-circle"></i>
+                    <div>
+                        <strong> Note : </strong> identitas pendaftar hanya digunakan untuk proses verifikasi kuota dan
+                        validasi antrean.
+                    </div>
+                </div>
+            </section>
+
+            <!-- form pendaftaran antrean -->
+            <div class="card">
+                <h3 class="section-tittle">
+                    Formulir Pendaftaran Antrean Online
+                </h3>
+                <p>Silakan isi formulir di bawah ini untuk mendaftar antrean online.
+                    Pastikan semua informasi yang Anda berikan akurat untuk memastikan proses antrean berjalan lancar.
+                </p>
+
+                <form id="formulir-pendaftaran">
+                    <!-- identitas pendaftar -->
+                    <div class="form-group">
+                        <h4>Identitas Pendaftar</h4>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-col">
+                            <label for="nama" class="form-label">Nama Lengkap</label>
+                            <input type="text" id="nama" name="nama" placeholder="Masukkan nama lengkap" required>
+                            <div class="form-error" id="nama-error"></div>
+                        </div>
+                        <div class="form-col">
+                            <label for="nik" class="form-label">NIK</label>
+                            <input type="text" id="nik" name="nik" placeholder="Masukkan NIK" required>
+                            <div class="form-error" id="nik-error"></div>
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-col">
+                            <label for="no-telp" class="form-label">No Telp</label>
+                            <input type="text" id="no-telp" name="no-telp" placeholder="Masukkan nomor telepon"
+                                required>
+                            <div class="form-error" id="no-telp-error"></div>
+                        </div>
+                        <div class="form-col">
+                            <label for="email-pendaftar" class="form-label">Email</label>
+                            <input type="email" id="email-pendaftar" name="email-pendaftar"
+                                placeholder="nama@example.com" required>
+                            <div class="form-error" id="email-pendaftar-error"></div>
+                        </div>
+                    </div>
+
+                    <!-- pelayanan instansi -->
+                    <div class="form-group">
+                        <h4>Pelayanan Instansi</h4>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-col">
+                            <label for="instansi" class="form-label">Instansi</label>
+                            <select id="instansi" name="instansi" class="form-control" required>
+                                <option value="">Pilih Instansi</option>
+                                <option value="Dinas Kependudukan dan Pencatatan Sipil">Dinas Kependudukan dan
+                                    Pencatatan Sipil</option>
+                                <option value="Dinas Penanaman Modal dan Pelayanan Terpadu Satu Pintu">Dinas
+                                    Penanaman Modal dan Pelayanan Terpadu Satu Pintu</option>
+                                <option value="Dinas Perhubungan">Dinas Perhubungan</option>
+                                <option value="Dinas Kesehatan">Dinas Kesehatan</option>
+                                <option value="Dinas Sosial">Dinas Sosial</option>
+                            </select>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </main>
+
+    <script>
+        feather.replace();
+    </script>
+</body>
+
+</html>

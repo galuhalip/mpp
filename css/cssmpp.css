@@ -864,7 +864,120 @@ body {
 }
 
 /* responsive laptop mini */
-/* lanjut nanti yaaa jam 2.51 capee uyyy */
+@media (max-width: 834px) {
+  .hamburger {
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+    gap: 5px;
+    z-index: 100;
+  }
+
+  .hamburger span {
+    width: 25px;
+    height: 3px;
+    background-color: #cc0000;
+    border-radius: 3px;
+    transition: all 0.3s ease;
+  }
+
+  .navbar {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background-color: #ffffff;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    z-index: 99;
+  }
+
+  .navbar.active {
+    max-height: 300px;
+  }
+
+  .navbar ul {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    margin: 0;
+    gap: 15px;
+  }
+
+  .navbar ul li {
+    text-align: center;
+  }
+
+  .hamburger.active span:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+  }
+
+  .hamburger.active span:nth-child(2) {
+    opacity: 0;
+  }
+
+  .hamburger.active span:nth-child(3) {
+    transform: rotate(-45deg) translate(7px, -7px);
+  }
+
+  .footer-col {
+    flex: 1;
+    min-width: 200px;
+  }
+
+  .footer-kiri {
+    flex: 1;
+  }
+
+  .newsletter {
+    flex: 1;
+    /* margin-top: 10px; */
+  }
+
+  .newsletter form {
+    max-width: 150px;
+    margin: 0 auto;
+  }
+
+  .footer-logo-area {
+    justify-content: flex-start;
+  }
+
+  .medsos-ikon {
+    justify-content: flex-start;
+  }
+
+  .footer-kiri {
+    text-align: left;
+  }
+
+  .footer-kiri h4::after {
+    left: 0;
+    transform: none;
+  }
+
+  .newsletter {
+    text-align: left;
+  }
+
+  /* .newsletter button {
+  } */
+
+  .newsletter h4::after {
+    left: 0;
+    transform: none;
+  }
+
+  .newsletter form {
+    margin: 0;
+  }
+
+  .beranda .statistic {
+    display: none;
+  }
+}
 
 /* Responsive HP */
 @media (max-width: 769px) {
@@ -1012,13 +1125,23 @@ body {
     width: auto;
   }
 
+  .footer-kiri {
+    text-align: center;
+  }
+
   .footer-kiri ul {
     padding: 0;
     margin: 15px 0 0 0;
+    align-items: center;
+    justify-content: center;
   }
 
   .footer-kiri li {
     margin: 12px 0;
+  }
+
+  .newsletter {
+    text-align: center;
   }
 
   .newsletter form {

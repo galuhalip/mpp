@@ -1,31 +1,35 @@
-// const btnDetails = document.querySelectorAll(".btn-detail");
+document.addEventListener("DOMContentLoaded", function () {
+  const hamburger = document.querySelector(".hamburger");
+  const navbar = document.querySelector(".navbar");
 
-// btnDetails.forEach((btn) => {
-//   btn.addEventListener("click", function (e) {
-//     e.preventDefault();
+  // Fungsi untuk membuka/tutup navbar
+  function toggleNavbar() {
+    hamburger.classList.toggle("active");
+    navbar.classList.toggle("active");
+  }
 
-//     // Ambil card induk
-//     const currentCard = this.closest(".instansi-card");
+  // Fungsi untuk menutup navbar
+  function closeNavbar() {
+    hamburger.classList.remove("active");
+    navbar.classList.remove("active");
+  }
 
-//     // Cek apakah card ini sudah aktif
-//     const isActive = currentCard.classList.contains("active");
+  // Event klik hamburger
+  if (hamburger && navbar) {
+    hamburger.addEventListener("click", function (event) {
+      event.stopPropagation(); // Mencegah event bubbling ke document
+      toggleNavbar();
+    });
 
-//     // Tutup SEMUA card
-//     const allCards = document.querySelectorAll(".instansi-card");
-//     allCards.forEach((card) => {
-//       card.classList.remove("active");
-//       const btnCard = card.querySelector(".btn-detail");
-//       if (btnCard) {
-//         btnCard.textContent = "Lihat Layanan";
-//       }
-//     });
-
-//     if (!isActive) {
-//       currentCard.classList.add("active");
-//       this.textContent = "Sembunyikan Layanan";
-//     }
-//   });
-// });
+    // Event klik di area sembarang (document)
+    document.addEventListener("click", function (event) {
+      // Cek apakah yang diklik bukan hamburger dan bukan di dalam navbar
+      if (!hamburger.contains(event.target) && !navbar.contains(event.target)) {
+        closeNavbar();
+      }
+    });
+  }
+});
 
 const btnDetails = document.querySelectorAll(".btn-detail");
 
@@ -49,11 +53,8 @@ btnDetails.forEach((btn) => {
 
     const currentCard = this.closest(".instansi-card");
     const isActive = currentCard.classList.contains("active");
-
-    // Tutup semua card
     closeAllCards();
 
-    // Jika card tadi belum aktif, buka card tersebut
     if (!isActive) {
       currentCard.classList.add("active");
       this.textContent = "Sembunyikan Layanan";
@@ -63,11 +64,9 @@ btnDetails.forEach((btn) => {
 
 // Event klik di document (luar card) untuk menutup
 document.addEventListener("click", function (e) {
-  // Cek apakah yang diklik ada di dalam card atau tombol
   const isClickInsideCard = e.target.closest(".instansi-card");
 
   if (!isClickInsideCard) {
-    // Klik di luar card, tutup semua
     closeAllCards();
   }
 });
@@ -78,7 +77,6 @@ const clearBtn = document.getElementById("clearSearch");
 const instansiCards = document.querySelectorAll(".instansi-card");
 const instansiGrid = document.querySelector(".instansi-grid");
 
-// Fungsi untuk melakukan pencarian
 function searchInstansi() {
   const keyword = searchInput.value.toLowerCase().trim();
   let hasResults = false;
@@ -88,20 +86,14 @@ function searchInstansi() {
     const instansiDesc = card.querySelector("p").textContent.toLowerCase();
     const layananItems = card.querySelectorAll(".layanan-list li");
 
-    // Cek apakah keyword cocok dengan nama, deskripsi, atau layanan
     let match = false;
-
-    // Cek nama instansi
     if (instansiName.includes(keyword)) {
       match = true;
     }
-
-    // Cek deskripsi
     if (instansiDesc.includes(keyword)) {
       match = true;
     }
 
-    // Cek daftar layanan
     layananItems.forEach((item) => {
       if (item.textContent.toLowerCase().includes(keyword)) {
         match = true;
@@ -117,7 +109,6 @@ function searchInstansi() {
     }
   });
 
-  // Tampilkan pesan jika tidak ada hasil
   const existingNoResult = document.querySelector(".no-result");
   if (!hasResults && keyword !== "") {
     if (!existingNoResult) {
@@ -136,7 +127,6 @@ function searchInstansi() {
     }
   }
 
-  // Tampilkan atau sembunyikan tombol clear
   if (keyword !== "") {
     clearBtn.style.display = "flex";
   } else {
@@ -144,10 +134,7 @@ function searchInstansi() {
   }
 }
 
-// Event listener untuk input search
 searchInput.addEventListener("input", searchInstansi);
-
-// Event listener untuk tombol clear
 clearBtn.addEventListener("click", function () {
   searchInput.value = "";
   searchInstansi();

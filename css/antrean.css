@@ -1,0 +1,337 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: #f8f8f8;
+}
+
+/* Header */
+#header {
+  background-color: #ffffff;
+  border-bottom: 3px solid #cc0000;
+  padding: 15px 30px;
+}
+
+/* Container utama header */
+.header-main {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.logo-area {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+/* Logo */
+.logo-area img {
+  height: 60px;
+  width: auto;
+}
+
+/* Teks brand (judul) */
+.brand h1 {
+  color: #cc0000; /* merah */
+  font-size: 24px;
+  margin-bottom: 5px;
+}
+
+.brand p {
+  color: #cc0000; /* merah */
+  font-size: 14px;
+  font-weight: bold;
+}
+
+/* Navbar */
+.navbar ul {
+  display: flex;
+  list-style: none;
+  gap: 25px;
+}
+
+.navbar ul li a {
+  color: #cc0000; /* merah */
+  text-decoration: none;
+  font-weight: bold;
+  padding: 10px 20px;
+  transition: all 0.3s ease;
+  border-radius: 5px;
+}
+
+.navbar ul li a:hover {
+  background-color: #cc0000; /* merah */
+  color: #ffffff; /* putih */
+}
+
+/* Antrean Page */
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.main-content {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  margin: 30px 0;
+}
+
+.hero {
+  background-color: white;
+  border-radius: 10px;
+  padding: 30px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.hero h2 {
+  color: #cc0000;
+  margin-bottom: 15px;
+  font-size: 2rem;
+}
+
+.hero p {
+  color: #555555;
+  max-width: 800px;
+  margin: 0 auto 20px;
+}
+
+.note {
+  padding: 15px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.keterangan {
+  background-color: #d4edda;
+  color: #155724;
+  border-left: 4px solid #28a745;
+  border-right: 4px solid #28a745;
+}
+
+/* ============ FORM ANTREAN ============ */
+.antrean-form {
+  padding: 20px 0 60px;
+  background: #ffffff;
+}
+
+.antrean-form .container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 30px;
+}
+
+/* Card Form */
+.card {
+  background: #ffffff;
+  border: 1px solid #e0e0e0;
+  border-radius: 16px;
+  padding: 30px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+}
+
+.card .section-tittle {
+  color: #cc0000;
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 12px;
+  text-align: center;
+}
+
+.card p {
+  color: #666666;
+  font-size: 15px;
+  line-height: 1.6;
+  text-align: center;
+  margin-bottom: 30px;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* ============ IDENTITAS PENDAFTAR ============ */
+.form-group {
+  margin-bottom: 25px;
+  padding-bottom: 15px;
+  border-bottom: 2px solid #f0f0f0;
+}
+
+.form-group h4 {
+  color: #cc0000;
+  font-size: 18px;
+  font-weight: 600;
+  margin: 0;
+  position: relative;
+  padding-left: 15px;
+}
+
+.form-group h4::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 4px;
+  background-color: #cc0000;
+  border-radius: 2px;
+}
+
+/* ============ FORM ROW & COLUMN ============ */
+.form-row {
+  display: flex;
+  gap: 25px;
+  margin-bottom: 20px;
+}
+
+.form-col {
+  flex: 1;
+  min-width: 0;
+}
+
+/* ============ FORM LABEL & INPUT ============ */
+.form-label {
+  display: block;
+  color: #333333;
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 6px;
+}
+
+.form-control {
+  width: 100%;
+  padding: 12px 15px;
+  border: 2px solid #ddd;
+  border-radius: 8px;
+  background-color: #f9f9f9;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+
+.form-control:focus {
+  outline: none;
+  border-color: #cc0000;
+  background-color: #ffffff;
+  box-shadow: 0 0 0 3px rgba(204, 0, 0, 0.08);
+}
+
+.form-col input {
+  width: 100%;
+  padding: 12px 16px;
+  border: 2px solid #e0e0e0;
+  border-radius: 8px;
+  font-family: "Poppins", sans-serif;
+  font-size: 14px;
+  transition: all 0.3s ease;
+  background: #fafafa;
+}
+
+.form-col input:focus {
+  outline: none;
+  border-color: #cc0000;
+  background: #ffffff;
+  box-shadow: 0 0 0 3px rgba(204, 0, 0, 0.08);
+}
+
+.form-col input::placeholder {
+  color: #aaaaaa;
+}
+
+/* ============ FORM ERROR ============ */
+.form-error {
+  color: #dc3545;
+  font-size: 12px;
+  margin-top: 4px;
+  min-height: 18px;
+}
+
+/* ============ RESPONSIVE ============ */
+
+/* Tablet (max 1024px) */
+@media (max-width: 1024px) {
+  .card {
+    padding: 30px 35px;
+  }
+
+  .card .section-tittle {
+    font-size: 22px;
+  }
+}
+
+/* Mobile (max 768px) */
+@media (max-width: 768px) {
+  .antrean-form {
+    padding: 15px 0 40px;
+  }
+
+  .card {
+    padding: 25px 20px;
+    border-radius: 12px;
+  }
+
+  .card .section-tittle {
+    font-size: 20px;
+  }
+
+  .card p {
+    font-size: 14px;
+    padding: 0 10px;
+  }
+
+  .form-row {
+    flex-direction: column;
+    gap: 15px;
+    margin-bottom: 15px;
+  }
+
+  .form-group h4 {
+    font-size: 16px;
+  }
+
+  .form-col input {
+    padding: 10px 14px;
+    font-size: 13px;
+  }
+}
+
+/* Mobile kecil (max 480px) */
+@media (max-width: 480px) {
+  .card {
+    padding: 20px 15px;
+  }
+
+  .card .section-tittle {
+    font-size: 18px;
+  }
+
+  .card > p {
+    font-size: 13px;
+  }
+
+  .form-label {
+    font-size: 13px;
+  }
+
+  .form-col input {
+    padding: 9px 12px;
+    font-size: 12px;
+  }
+}
