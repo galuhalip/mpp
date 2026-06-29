@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="id">
 
 <head>
     <meta charset="UTF-8">
@@ -107,14 +107,48 @@
                             <label for="instansi" class="form-label">Instansi</label>
                             <select id="instansi" name="instansi" class="form-control" required>
                                 <option value="">Pilih Instansi</option>
-                                <option value="Dinas Kependudukan dan Pencatatan Sipil">Dinas Kependudukan dan
-                                    Pencatatan Sipil</option>
-                                <option value="Dinas Penanaman Modal dan Pelayanan Terpadu Satu Pintu">Dinas
-                                    Penanaman Modal dan Pelayanan Terpadu Satu Pintu</option>
-                                <option value="Dinas Perhubungan">Dinas Perhubungan</option>
-                                <option value="Dinas Kesehatan">Dinas Kesehatan</option>
-                                <option value="Dinas Sosial">Dinas Sosial</option>
+                                <option value="BPJS Kesehatan">BPJS Kesehatan</option>
+                                <option value="Kementerian Perhubungan">Kementerian Perhubungan</option>
+                                <option value="Kementerian Imigrasi">Kementerian Imigrasi</option>
+                                <option value="Kementerian Agama">Kementerian Agama</option>
+                                <option value="Pemerintah Kota Bekasi">Pemerintah Kota Bekasi</option>
+                                <option value="Polres Metro Bekasi Kota">Polres Metro Bekasi Kota</option>
                             </select>
+                        </div>
+
+                        <div class="form-col">
+                            <label for="layanan" class="form-label">Layanan</label>
+                            <select id="layanan" name="layanan" class="form-control" required>
+                                <option value="">Pilih Instansi Terlebih Dahulu</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <!-- waktu atau sesi -->
+                    <div class="form-group">
+                        <h4>Waktu Pelayanan</h4>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-col">
+                            <label for="tanggal" class="form-label">Tanggal</label>
+                            <input type="date" id="tanggal" name="tanggal" class="form-control" required>
+                        </div>
+
+                        <div class="form-col">
+                            <label for="waktu" class="form-label">Waktu</label>
+                            <input type="time" id="waktu" name="waktu" class="form-control" required>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <h4>Deskripsi Keperluan</h4>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-col">
+                            <label for="textarea" class="form-label">Deskripsi Keperluan</label>
+                            <textarea id="textarea" name="textarea" class="form-control" rows="4" required
+                                placeholder="Jelaskan dan deskripsikan keperluan Anda...."></textarea>
                         </div>
                     </div>
                 </form>
@@ -122,9 +156,16 @@
         </div>
     </main>
 
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2024 Mall Pelayanan Publik Kota Bekasi. All rights reserved.</p>
+        </div>
+    </footer>
     <script>
         feather.replace();
     </script>
+
+    <script src="js/antrean.js"></script>
 </body>
 
 </html>
